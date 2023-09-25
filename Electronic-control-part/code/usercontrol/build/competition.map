@@ -65,6 +65,12 @@ Discarded input sections
                 0x00000000        0x4 build/src/main.o
  .ARM.exidx.text._Z9pre_autonv
                 0x00000000        0x8 build/src/main.o
+ .text._Z12prevent_movev
+                0x00000000       0x34 build/src/main.o
+ .ARM.exidx.text._Z12prevent_movev
+                0x00000000        0x8 build/src/main.o
+ .bss.A2        0x00000000        0x4 build/src/main.o
+ .bss.A4        0x00000000        0x4 build/src/main.o
  .llvm_addrsig  0x00000000        0xc build/src/main.o
  .text          0x00000000        0x0 build/src/robot-config.o
  .llvm_addrsig  0x00000000        0x8 build/src/robot-config.o
@@ -1030,6 +1036,8 @@ Discarded input sections
                 0x00000000        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
  .rodata._ZN3vex5PORT3E
                 0x00000000        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+ .rodata._ZN3vex5PORT1E
+                0x00000000        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
  .rodata._ZN3vex7monoXXLE
                 0x00000000        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
  .rodata._ZN3vex7propXXLE
@@ -1076,6 +1084,8 @@ Discarded input sections
                 0x00000000        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
  .rodata._ZN3vex4blueE
                 0x00000000        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+ .rodata._ZN3vex5PORT9E
+                0x00000000        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
  .rodata._ZN3vex6PORT21E
                 0x00000000        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
  .rodata._ZN3vex6monoXSE
@@ -1101,8 +1111,6 @@ Discarded input sections
  .rodata._ZN3vex2NmE
                 0x00000000        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
  .rodata._ZN3vex6PORT11E
-                0x00000000        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
- .rodata._ZN3vex5PORT6E
                 0x00000000        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
  .rodata._ZN3vex3degE
                 0x00000000        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
@@ -1153,8 +1161,6 @@ Discarded input sections
  .data._ZN3vex11rumbleShortE
                 0x00000000        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
  .rodata._ZN3vex2mVE
-                0x00000000        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
- .rodata._ZN3vex5PORT7E
                 0x00000000        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
  .rodata._ZN3vex23__sdk_cpp_version_minorE
                 0x00000000        0x1 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
@@ -2570,7 +2576,7 @@ Linker script and memory map
                 0x00000400                _FIQ_STACK_SIZE = DEFINED (_FIQ_STACK_SIZE)?_FIQ_STACK_SIZE:0x400
                 0x00000400                _UNDEF_STACK_SIZE = DEFINED (_UNDEF_STACK_SIZE)?_UNDEF_STACK_SIZE:0x400
 
-.text           0x03800000     0x22f8
+.text           0x03800000     0x2288
  *(.vectors)
  *(.boot_data)
  .boot_data     0x03800000       0x20 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
@@ -2588,434 +2594,435 @@ Linker script and memory map
                 0x03800100        0x4 build/src/main.o
                 0x03800100                autonomous()
  .text._Z11usercontrolv
-                0x03800104      0x1a4 build/src/main.o
+                0x03800104      0x130 build/src/main.o
                 0x03800104                usercontrol()
- .text.main     0x038002a8       0xb8 build/src/main.o
-                0x038002a8                main
+ *fill*         0x03800234        0x4 
+ .text.main     0x03800238       0xb8 build/src/main.o
+                0x03800238                main
  .text._GLOBAL__sub_I_main.cpp
-                0x03800360       0x5c build/src/main.o
+                0x038002f0       0x5c build/src/main.o
  .text._Z11vexcodeInitv
-                0x038003bc        0x4 build/src/robot-config.o
-                0x038003bc                vexcodeInit()
+                0x0380034c        0x4 build/src/robot-config.o
+                0x0380034c                vexcodeInit()
  .text._GLOBAL__sub_I_robot_config.cpp
-                0x038003c0      0x14c build/src/robot-config.o
- .text.vexMain  0x0380050c       0xb0 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
-                0x0380050c                vexMain
+                0x03800350      0x14c build/src/robot-config.o
+ .text.vexMain  0x0380049c       0xb0 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x0380049c                vexMain
  .text.__vex_function_prolog
-                0x038005bc       0x18 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
-                0x038005bc                __vex_function_prolog
- .text._init    0x038005d4        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
-                0x038005d4                _init
- .text._fini    0x038005d8        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
-                0x038005d8                _fini
+                0x0380054c       0x18 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x0380054c                __vex_function_prolog
+ .text._init    0x03800564        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x03800564                _init
+ .text._fini    0x03800568        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x03800568                _fini
  .text.vexStdlibVersionLinked
-                0x038005dc        0xc c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_util.c.obj)
-                0x038005dc                vexStdlibVersionLinked
+                0x0380056c        0xc c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_util.c.obj)
+                0x0380056c                vexStdlibVersionLinked
  .text.vexStdlibVersionVerify
-                0x038005e8       0x30 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_util.c.obj)
-                0x038005e8                vexStdlibVersionVerify
+                0x03800578       0x30 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_util.c.obj)
+                0x03800578                vexStdlibVersionVerify
  .text.vexPrivateApiEnable
-                0x03800618       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800618                vexPrivateApiEnable
+                0x038005a8       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038005a8                vexPrivateApiEnable
  .text.vexStdlibMismatchError
-                0x03800628       0x3c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800628                vexStdlibMismatchError
+                0x038005b8       0x3c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038005b8                vexStdlibMismatchError
  .text.vexTaskAdd
-                0x03800664       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800664                vexTaskAdd
+                0x038005f4       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038005f4                vexTaskAdd
  .text.vexTasksRun
-                0x03800674       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800674                vexTasksRun
+                0x03800604       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800604                vexTasksRun
  .text.vexTaskYield
-                0x03800684       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800684                vexTaskYield
+                0x03800614       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800614                vexTaskYield
  .text.vexTaskCheckTimeslice
-                0x03800694       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800694                vexTaskCheckTimeslice
+                0x03800624       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800624                vexTaskCheckTimeslice
  .text.vexTaskSleep
-                0x038006a4       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038006a4                vexTaskSleep
+                0x03800634       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800634                vexTaskSleep
  .text.vexTasksDump
-                0x038006b4       0x1c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038006b4                vexTasksDump
+                0x03800644       0x1c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800644                vexTasksDump
  .text.vexTaskGetTaskIndex
-                0x038006d0       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038006d0                vexTaskGetTaskIndex
+                0x03800660       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800660                vexTaskGetTaskIndex
  .text.vexTaskStopAll
-                0x038006e0       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038006e0                vexTaskStopAll
+                0x03800670       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800670                vexTaskStopAll
  .text.vexTaskRemoveAllUser
-                0x038006f0       0x34 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038006f0                vexTaskRemoveAllUser
+                0x03800680       0x34 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800680                vexTaskRemoveAllUser
  .text.vexTaskCompletionIdSet
-                0x03800724       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800724                vexTaskCompletionIdSet
+                0x038006b4       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038006b4                vexTaskCompletionIdSet
  .text.vexTaskStopWithId
-                0x03800734       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800734                vexTaskStopWithId
+                0x038006c4       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038006c4                vexTaskStopWithId
  .text.vexEventAdd
-                0x03800744       0x34 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800744                vexEventAdd
+                0x038006d4       0x34 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038006d4                vexEventAdd
  .text.vexEventUserIndexGet
-                0x03800778       0x1c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800778                vexEventUserIndexGet
+                0x03800708       0x1c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800708                vexEventUserIndexGet
  .text.vexEventAddWithArg
-                0x03800794       0x3c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800794                vexEventAddWithArg
+                0x03800724       0x3c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800724                vexEventAddWithArg
  .text.vexEventsCleanup
-                0x038007d0       0x2c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038007d0                vexEventsCleanup
+                0x03800760       0x2c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800760                vexEventsCleanup
  .text.vexDebug
-                0x038007fc       0x38 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038007fc                vexDebug
+                0x0380078c       0x38 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x0380078c                vexDebug
  .text.vex_sprintf
-                0x03800834       0x40 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800834                vex_sprintf
+                0x038007c4       0x40 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038007c4                vex_sprintf
  .text.vex_vsnprintf
-                0x03800874       0x3c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800874                vex_vsnprintf
+                0x03800804       0x3c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800804                vex_vsnprintf
  .text.vexSystemTimeGet
-                0x038008b0       0x1c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038008b0                vexSystemTimeGet
+                0x03800840       0x1c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800840                vexSystemTimeGet
  .text.vexSystemExitRequest
-                0x038008cc       0x1c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038008cc                vexSystemExitRequest
+                0x0380085c       0x1c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x0380085c                vexSystemExitRequest
  .text.vexDeviceGetByIndex
-                0x038008e8       0x24 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038008e8                vexDeviceGetByIndex
+                0x03800878       0x24 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800878                vexDeviceGetByIndex
  .text.vexControllerGet
-                0x0380090c       0x2c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x0380090c                vexControllerGet
+                0x0380089c       0x2c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x0380089c                vexControllerGet
  .text.vexControllerTextSet
-                0x03800938       0x74 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800938                vexControllerTextSet
+                0x038008c8       0x74 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038008c8                vexControllerTextSet
  .text.vexDeviceMotorVelocitySet
-                0x038009ac       0x2c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038009ac                vexDeviceMotorVelocitySet
+                0x0380093c       0x2c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x0380093c                vexDeviceMotorVelocitySet
  .text.vexDeviceMotorActualVelocityGet
-                0x038009d8       0x24 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038009d8                vexDeviceMotorActualVelocityGet
+                0x03800968       0x24 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800968                vexDeviceMotorActualVelocityGet
  .text.vexDeviceMotorReverseFlagSet
-                0x038009fc       0x2c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x038009fc                vexDeviceMotorReverseFlagSet
+                0x0380098c       0x2c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x0380098c                vexDeviceMotorReverseFlagSet
  .text.vexDeviceMotorBrakeModeSet
-                0x03800a28       0x2c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800a28                vexDeviceMotorBrakeModeSet
+                0x038009b8       0x2c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038009b8                vexDeviceMotorBrakeModeSet
  .text.vexDeviceMotorPositionSet
-                0x03800a54       0x34 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800a54                vexDeviceMotorPositionSet
+                0x038009e4       0x34 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038009e4                vexDeviceMotorPositionSet
  .text.vexDeviceMotorGearingSet
-                0x03800a88       0x2c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800a88                vexDeviceMotorGearingSet
+                0x03800a18       0x2c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800a18                vexDeviceMotorGearingSet
  .text.vexDeviceMotorGearingGet
-                0x03800ab4       0x24 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800ab4                vexDeviceMotorGearingGet
+                0x03800a44       0x24 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800a44                vexDeviceMotorGearingGet
  .text.vexDisplayForegroundColor
-                0x03800ad8       0x24 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800ad8                vexDisplayForegroundColor
+                0x03800a68       0x24 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800a68                vexDisplayForegroundColor
  .text.vexDisplayBackgroundColor
-                0x03800afc       0x24 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800afc                vexDisplayBackgroundColor
+                0x03800a8c       0x24 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800a8c                vexDisplayBackgroundColor
  .text.vexDisplayVPrintf
-                0x03800b20       0x50 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800b20                vexDisplayVPrintf
+                0x03800ab0       0x50 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800ab0                vexDisplayVPrintf
  .text.vexDisplayTextReference
-                0x03800b70       0x24 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800b70                vexDisplayTextReference
+                0x03800b00       0x24 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800b00                vexDisplayTextReference
  .text.vexDisplayTextSize
-                0x03800b94       0x2c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800b94                vexDisplayTextSize
+                0x03800b24       0x2c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800b24                vexDisplayTextSize
  .text.vexDisplayFontNamedSet
-                0x03800bc0       0x24 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800bc0                vexDisplayFontNamedSet
+                0x03800b50       0x24 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800b50                vexDisplayFontNamedSet
  .text.vexDisplayStringWidthGet
-                0x03800be4       0x24 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800be4                vexDisplayStringWidthGet
+                0x03800b74       0x24 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800b74                vexDisplayStringWidthGet
  .text.vexSystemStdlibImpureDataAddr
-                0x03800c08       0x28 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800c08                vexSystemStdlibImpureDataAddr
+                0x03800b98       0x28 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800b98                vexSystemStdlibImpureDataAddr
  .text.vexSystemStdlibImpureDataSize
-                0x03800c30       0x28 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800c30                vexSystemStdlibImpureDataSize
+                0x03800bc0       0x28 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800bc0                vexSystemStdlibImpureDataSize
  .text.vexSystemSaveUserData
-                0x03800c58       0x3c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800c58                vexSystemSaveUserData
+                0x03800be8       0x3c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800be8                vexSystemSaveUserData
  .text.vexDisplayThemeIdGet
-                0x03800c94       0x38 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800c94                vexDisplayThemeIdGet
+                0x03800c24       0x38 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800c24                vexDisplayThemeIdGet
  .text.vexDeviceEventMaskSet
-                0x03800ccc       0x48 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800ccc                vexDeviceEventMaskSet
+                0x03800c5c       0x48 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800c5c                vexDeviceEventMaskSet
  .text.vexDeviceEventMaskGet
-                0x03800d14       0x3c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
-                0x03800d14                vexDeviceEventMaskGet
+                0x03800ca4       0x3c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03800ca4                vexDeviceEventMaskGet
  .text.vexSystemVersion
-                0x03800d50       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiversions.c.obj)
-                0x03800d50                vexSystemVersion
+                0x03800ce0       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiversions.c.obj)
+                0x03800ce0                vexSystemVersion
  .text.vexStdlibVersion
-                0x03800d60       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiversions.c.obj)
-                0x03800d60                vexStdlibVersion
+                0x03800cf0       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiversions.c.obj)
+                0x03800cf0                vexStdlibVersion
  .text._ZN3vex4waitEdNS_9timeUnitsE
-                0x03800d70       0x30 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x03800d70                vex::wait(double, vex::timeUnits)
+                0x03800d00       0x30 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03800d00                vex::wait(double, vex::timeUnits)
  .text._ZN3vex5motorD2Ev
-                0x03800da0       0x20 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03800da0                vex::motor::~motor()
-                0x03800da0                vex::motor::~motor()
+                0x03800d30       0x20 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03800d30                vex::motor::~motor()
+                0x03800d30                vex::motor::~motor()
  .text._ZN3vex5motorD0Ev
-                0x03800dc0       0x1c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03800dc0                vex::motor::~motor()
+                0x03800d50       0x1c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03800d50                vex::motor::~motor()
  .text._ZN3vex5motor9installedEv
-                0x03800ddc       0x18 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03800ddc                vex::motor::installed()
+                0x03800d6c       0x18 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03800d6c                vex::motor::installed()
  .text._ZN3vex5motor15defaultStoppingENS_9brakeTypeE
-                0x03800df4       0x30 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03800df4                vex::motor::defaultStopping(vex::brakeType)
+                0x03800d84       0x30 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03800d84                vex::motor::defaultStopping(vex::brakeType)
  .text._ZN3vex5motorC2El
-                0x03800e24       0x78 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03800e24                vex::motor::motor(long)
-                0x03800e24                vex::motor::motor(long)
+                0x03800db4       0x78 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03800db4                vex::motor::motor(long)
+                0x03800db4                vex::motor::motor(long)
  .text._ZN3vex5motorC2ElNS_11gearSettingEb
-                0x03800e9c       0x34 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03800e9c                vex::motor::motor(long, vex::gearSetting, bool)
-                0x03800e9c                vex::motor::motor(long, vex::gearSetting, bool)
+                0x03800e2c       0x34 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03800e2c                vex::motor::motor(long, vex::gearSetting, bool)
+                0x03800e2c                vex::motor::motor(long, vex::gearSetting, bool)
  .text._ZN3vex5motor16velocityToScaledEdNS_13velocityUnitsE
-                0x03800ed0       0x5c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03800ed0                vex::motor::velocityToScaled(double, vex::velocityUnits)
+                0x03800e60       0x5c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03800e60                vex::motor::velocityToScaled(double, vex::velocityUnits)
  .text._ZN3vex5motor8velocityENS_13velocityUnitsE
-                0x03800f2c       0x30 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03800f2c                vex::motor::velocity(vex::velocityUnits)
+                0x03800ebc       0x30 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03800ebc                vex::motor::velocity(vex::velocityUnits)
  .text._ZN3vex5motor5valueEv
-                0x03800f5c       0x1c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03800f5c                vex::motor::value()
+                0x03800eec       0x1c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03800eec                vex::motor::value()
  .text._ZN3vex5motor16scaledToVelocityEdNS_13velocityUnitsE
-                0x03800f78       0xa4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03800f78                vex::motor::scaledToVelocity(double, vex::velocityUnits)
+                0x03800f08       0xa4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03800f08                vex::motor::scaledToVelocity(double, vex::velocityUnits)
  .text._ZN3vex5motor4spinENS_13directionTypeEdNS_13velocityUnitsE
-                0x0380101c       0x5c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x0380101c                vex::motor::spin(vex::directionType, double, vex::velocityUnits)
+                0x03800fac       0x5c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03800fac                vex::motor::spin(vex::directionType, double, vex::velocityUnits)
  .text._ZN3vex10controllerD2Ev
-                0x03801078        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03801078                vex::controller::~controller()
-                0x03801078                vex::controller::~controller()
+                0x03801008        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03801008                vex::controller::~controller()
+                0x03801008                vex::controller::~controller()
  .text._ZN3vex10controller5valueE19_V5_ControllerIndex
-                0x0380107c        0x8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x0380107c                vex::controller::value(_V5_ControllerIndex)
+                0x0380100c        0x8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x0380100c                vex::controller::value(_V5_ControllerIndex)
  .text._ZNK3vex10controller6button21_buttonToPressedEventEv
-                0x03801084       0x20 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03801084                vex::controller::button::_buttonToPressedEvent() const
+                0x03801014       0x20 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03801014                vex::controller::button::_buttonToPressedEvent() const
  .text._ZNK3vex10controller6button22_buttonToReleasedEventEv
-                0x038010a4       0x20 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x038010a4                vex::controller::button::_buttonToReleasedEvent() const
+                0x03801034       0x20 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03801034                vex::controller::button::_buttonToReleasedEvent() const
  .text._ZN3vex10controller6buttonC2ENS0_11tButtonTypeEPS0_
-                0x038010c4       0x48 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x038010c4                vex::controller::button::button(vex::controller::tButtonType, vex::controller*)
-                0x038010c4                vex::controller::button::button(vex::controller::tButtonType, vex::controller*)
+                0x03801054       0x48 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03801054                vex::controller::button::button(vex::controller::tButtonType, vex::controller*)
+                0x03801054                vex::controller::button::button(vex::controller::tButtonType, vex::controller*)
  .text._ZNK3vex10controller4axis5valueEv
-                0x0380110c       0x58 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x0380110c                vex::controller::axis::value() const
+                0x0380109c       0x58 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x0380109c                vex::controller::axis::value() const
  .text._ZNK3vex10controller4axis8positionENS_12percentUnitsE
-                0x03801164       0x1c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03801164                vex::controller::axis::position(vex::percentUnits) const
+                0x038010f4       0x1c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x038010f4                vex::controller::axis::position(vex::percentUnits) const
  .text._ZNK3vex10controller4axis23_joystickToChangedEventEv
-                0x03801180       0x20 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03801180                vex::controller::axis::_joystickToChangedEvent() const
+                0x03801110       0x20 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03801110                vex::controller::axis::_joystickToChangedEvent() const
  .text._ZN3vex10controller4axisC2ENS0_9tAxisTypeEPS0_
-                0x038011a0       0x2c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x038011a0                vex::controller::axis::axis(vex::controller::tAxisType, vex::controller*)
-                0x038011a0                vex::controller::axis::axis(vex::controller::tAxisType, vex::controller*)
+                0x03801130       0x2c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03801130                vex::controller::axis::axis(vex::controller::tAxisType, vex::controller*)
+                0x03801130                vex::controller::axis::axis(vex::controller::tAxisType, vex::controller*)
  .text._ZN3vex10controllerC2ENS_14controllerTypeE
-                0x038011cc      0x16c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x038011cc                vex::controller::controller(vex::controllerType)
-                0x038011cc                vex::controller::controller(vex::controllerType)
+                0x0380115c      0x16c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x0380115c                vex::controller::controller(vex::controllerType)
+                0x0380115c                vex::controller::controller(vex::controllerType)
  .text._ZN3vex10controller3lcd15getControllerIdEv
-                0x03801338       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03801338                vex::controller::lcd::getControllerId()
+                0x038012c8       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x038012c8                vex::controller::lcd::getControllerId()
  .text._ZN3vex10controller3lcd9setCursorEll
-                0x03801348       0x40 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03801348                vex::controller::lcd::setCursor(long, long)
+                0x038012d8       0x40 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x038012d8                vex::controller::lcd::setCursor(long, long)
  .text._ZN3vex10controller3lcd5printEPKcz
-                0x03801388       0x80 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
-                0x03801388                vex::controller::lcd::print(char const*, ...)
+                0x03801318       0x80 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03801318                vex::controller::lcd::print(char const*, ...)
  .text._ZN3vex11this_thread9sleep_forEm
-                0x03801408        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_thread.cpp.obj)
-                0x03801408                vex::this_thread::sleep_for(unsigned long)
+                0x03801398        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_thread.cpp.obj)
+                0x03801398                vex::this_thread::sleep_for(unsigned long)
  .text._ZN3vex5event4initEmmPFvvE
-                0x0380140c        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_event.cpp.obj)
-                0x0380140c                vex::event::init(unsigned long, unsigned long, void (*)())
+                0x0380139c        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_event.cpp.obj)
+                0x0380139c                vex::event::init(unsigned long, unsigned long, void (*)())
  .text._ZN3vex5event4initEmmPFvPvES1_
-                0x03801410        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_event.cpp.obj)
-                0x03801410                vex::event::init(unsigned long, unsigned long, void (*)(void*), void*)
+                0x038013a0        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_event.cpp.obj)
+                0x038013a0                vex::event::init(unsigned long, unsigned long, void (*)(void*), void*)
  .text._ZN3vex5event9userindexEv
-                0x03801414        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_event.cpp.obj)
-                0x03801414                vex::event::userindex()
+                0x038013a4        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_event.cpp.obj)
+                0x038013a4                vex::event::userindex()
  .text._ZZN3vex6meventC4EmmENUlvE_4_FUNEv
-                0x03801418        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_mevent.cpp.obj)
+                0x038013a8        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_mevent.cpp.obj)
  .text._ZN3vex6meventC2Emm
-                0x0380141c       0x70 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_mevent.cpp.obj)
-                0x0380141c                vex::mevent::mevent(unsigned long, unsigned long)
-                0x0380141c                vex::mevent::mevent(unsigned long, unsigned long)
+                0x038013ac       0x70 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_mevent.cpp.obj)
+                0x038013ac                vex::mevent::mevent(unsigned long, unsigned long)
+                0x038013ac                vex::mevent::mevent(unsigned long, unsigned long)
  .text._ZN3vex5brain9_getIndexEv
-                0x0380148c       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x0380148c                vex::brain::_getIndex()
+                0x0380141c       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x0380141c                vex::brain::_getIndex()
  .text._ZN3vex5brain3lcd9setCursorEll
-                0x0380149c       0x44 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x0380149c                vex::brain::lcd::setCursor(long, long)
+                0x0380142c       0x44 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x0380142c                vex::brain::lcd::setCursor(long, long)
  .text._ZN3vex5brain3lcd7setFontENS_8fontTypeE
-                0x038014e0      0x23c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x038014e0                vex::brain::lcd::setFont(vex::fontType)
+                0x03801470      0x23c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x03801470                vex::brain::lcd::setFont(vex::fontType)
  .text._ZN3vex5brain3lcdC2Ev
-                0x0380171c       0x94 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x0380171c                vex::brain::lcd::lcd()
-                0x0380171c                vex::brain::lcd::lcd()
+                0x038016ac       0x94 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x038016ac                vex::brain::lcd::lcd()
+                0x038016ac                vex::brain::lcd::lcd()
  .text._ZN3vex5brainC2Ev
-                0x038017b0       0x3c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x038017b0                vex::brain::brain()
-                0x038017b0                vex::brain::brain()
+                0x03801740       0x3c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x03801740                vex::brain::brain()
+                0x03801740                vex::brain::brain()
  .text._ZN3vex5brain3lcd10rowToPixelEl
-                0x038017ec       0x34 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x038017ec                vex::brain::lcd::rowToPixel(long)
+                0x0380177c       0x34 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x0380177c                vex::brain::lcd::rowToPixel(long)
  .text._ZN3vex5brain3lcd5printEPKcz
-                0x03801820       0xb8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x03801820                vex::brain::lcd::print(char const*, ...)
+                0x038017b0       0xb8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x038017b0                vex::brain::lcd::print(char const*, ...)
  .text._ZN3vex5brainD2Ev
-                0x038018d8       0x20 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
-                0x038018d8                vex::brain::~brain()
-                0x038018d8                vex::brain::~brain()
+                0x03801868       0x20 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x03801868                vex::brain::~brain()
+                0x03801868                vex::brain::~brain()
  .text._ZN3vex11competition8_disableEPv
-                0x038018f8       0xa4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x038018f8                vex::competition::_disable(void*)
+                0x03801888       0xa4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03801888                vex::competition::_disable(void*)
  .text._ZN3vex11competition11_autonomousEv
-                0x0380199c       0x80 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x0380199c                vex::competition::_autonomous()
+                0x0380192c       0x80 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x0380192c                vex::competition::_autonomous()
  .text._ZN3vex11competition14_drivercontrolEv
-                0x03801a1c       0x80 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03801a1c                vex::competition::_drivercontrol()
+                0x038019ac       0x80 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x038019ac                vex::competition::_drivercontrol()
  .text._ZN3vex11competitionC2Ev
-                0x03801a9c      0x13c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03801a9c                vex::competition::competition()
-                0x03801a9c                vex::competition::competition()
+                0x03801a2c      0x13c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03801a2c                vex::competition::competition()
+                0x03801a2c                vex::competition::competition()
  .text._ZN3vex11competitionD2Ev
-                0x03801bd8        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03801bd8                vex::competition::~competition()
-                0x03801bd8                vex::competition::~competition()
+                0x03801b68        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03801b68                vex::competition::~competition()
+                0x03801b68                vex::competition::~competition()
  .text._ZN3vex11competition10autonomousEPFvvE
-                0x03801bdc       0x44 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03801bdc                vex::competition::autonomous(void (*)())
+                0x03801b6c       0x44 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03801b6c                vex::competition::autonomous(void (*)())
  .text._ZN3vex11competition13drivercontrolEPFvvE
-                0x03801c20       0x44 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03801c20                vex::competition::drivercontrol(void (*)())
+                0x03801bb0       0x44 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03801bb0                vex::competition::drivercontrol(void (*)())
  .text._ZN3vex7triportD2Ev
-                0x03801c64       0x38 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03801c64                vex::triport::~triport()
-                0x03801c64                vex::triport::~triport()
+                0x03801bf4       0x38 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03801bf4                vex::triport::~triport()
+                0x03801bf4                vex::triport::~triport()
  .text._ZN3vex7triportD0Ev
-                0x03801c9c       0x1c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03801c9c                vex::triport::~triport()
+                0x03801c2c       0x1c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03801c2c                vex::triport::~triport()
  .text._ZN3vex7triport9installedEv
-                0x03801cb8       0x18 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03801cb8                vex::triport::installed()
+                0x03801c48       0x18 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03801c48                vex::triport::installed()
  .text._ZN3vex7triport4portC2ElPS0_
-                0x03801cd0       0x74 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03801cd0                vex::triport::port::port(long, vex::triport*)
-                0x03801cd0                vex::triport::port::port(long, vex::triport*)
+                0x03801c60       0x74 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03801c60                vex::triport::port::port(long, vex::triport*)
+                0x03801c60                vex::triport::port::port(long, vex::triport*)
  .text._ZN3vex7triportC2El
-                0x03801d44       0xf0 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x03801d44                vex::triport::triport(long)
-                0x03801d44                vex::triport::triport(long)
+                0x03801cd4       0xf0 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03801cd4                vex::triport::triport(long)
+                0x03801cd4                vex::triport::triport(long)
  .text._ZN3vex5colorD2Ev
-                0x03801e34        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03801e34                vex::color::~color()
-                0x03801e34                vex::color::~color()
+                0x03801dc4        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03801dc4                vex::color::~color()
+                0x03801dc4                vex::color::~color()
  .text.startup._GLOBAL__sub_I__ZN3vex5color5blackE
-                0x03801e38      0x164 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03801dc8      0x164 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
  .text._ZN3vex5timerD2Ev
-                0x03801f9c        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_timer.cpp.obj)
-                0x03801f9c                vex::timer::~timer()
-                0x03801f9c                vex::timer::~timer()
+                0x03801f2c        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_timer.cpp.obj)
+                0x03801f2c                vex::timer::~timer()
+                0x03801f2c                vex::timer::~timer()
  .text._ZN3vex5timer5clearEv
-                0x03801fa0       0x1c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_timer.cpp.obj)
-                0x03801fa0                vex::timer::clear()
+                0x03801f30       0x1c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_timer.cpp.obj)
+                0x03801f30                vex::timer::clear()
  .text._ZN3vex5timerC2Ev
-                0x03801fbc       0x14 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_timer.cpp.obj)
-                0x03801fbc                vex::timer::timer()
-                0x03801fbc                vex::timer::timer()
+                0x03801f4c       0x14 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_timer.cpp.obj)
+                0x03801f4c                vex::timer::timer()
+                0x03801f4c                vex::timer::timer()
  .text.vexMotorVelocitySet
-                0x03801fd0       0x20 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x03801fd0                vexMotorVelocitySet
+                0x03801f60       0x20 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03801f60                vexMotorVelocitySet
  .text.vexMotorActualVelocityGet
-                0x03801ff0       0x24 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x03801ff0                vexMotorActualVelocityGet
+                0x03801f80       0x24 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03801f80                vexMotorActualVelocityGet
  .text.vexMotorReverseFlagSet
-                0x03802014       0x20 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x03802014                vexMotorReverseFlagSet
+                0x03801fa4       0x20 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03801fa4                vexMotorReverseFlagSet
  .text.vexMotorBrakeModeSet
-                0x03802034       0x20 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x03802034                vexMotorBrakeModeSet
+                0x03801fc4       0x20 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03801fc4                vexMotorBrakeModeSet
  .text.vexMotorPositionSet
-                0x03802054       0x28 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x03802054                vexMotorPositionSet
+                0x03801fe4       0x28 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03801fe4                vexMotorPositionSet
  .text.vexMotorGearingSet
-                0x0380207c       0x20 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x0380207c                vexMotorGearingSet
+                0x0380200c       0x20 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x0380200c                vexMotorGearingSet
  .text.vexMotorGearingGet
-                0x0380209c       0x18 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x0380209c                vexMotorGearingGet
+                0x0380202c       0x18 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x0380202c                vexMotorGearingGet
  .text.vexEventMaskSet
-                0x038020b4       0x28 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x038020b4                vexEventMaskSet
+                0x03802044       0x28 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03802044                vexEventMaskSet
  .text.vexEventMaskGet
-                0x038020dc       0x18 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
-                0x038020dc                vexEventMaskGet
+                0x0380206c       0x18 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x0380206c                vexEventMaskGet
  .text._ZN3vex6deviceD2Ev
-                0x038020f4        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
-                0x038020f4                vex::device::~device()
-                0x038020f4                vex::device::~device()
+                0x03802084        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x03802084                vex::device::~device()
+                0x03802084                vex::device::~device()
  .text._ZN3vex6device5valueEv
-                0x038020f8        0x8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
-                0x038020f8                vex::device::value()
+                0x03802088        0x8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x03802088                vex::device::value()
  .text._ZN3vex6deviceD0Ev
-                0x03802100       0x14 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
-                0x03802100                vex::device::~device()
+                0x03802090       0x14 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x03802090                vex::device::~device()
  .text._ZN3vex6device4initEl
-                0x03802114       0x30 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
-                0x03802114                vex::device::init(long)
+                0x038020a4       0x30 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x038020a4                vex::device::init(long)
  .text._ZN3vex6deviceC2El
-                0x03802144       0x20 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
-                0x03802144                vex::device::device(long)
-                0x03802144                vex::device::device(long)
+                0x038020d4       0x20 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x038020d4                vex::device::device(long)
+                0x038020d4                vex::device::device(long)
  .text._ZN3vex6device4typeEv
-                0x03802164       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
-                0x03802164                vex::device::type()
+                0x038020f4       0x10 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x038020f4                vex::device::type()
  .text._ZN3vex6device9installedEv
-                0x03802174       0x14 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
-                0x03802174                vex::device::installed()
+                0x03802104       0x14 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x03802104                vex::device::installed()
  .text._ZN3vex4taskC2EPFivE
-                0x03802188       0x5c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
-                0x03802188                vex::task::task(int (*)())
-                0x03802188                vex::task::task(int (*)())
+                0x03802118       0x5c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x03802118                vex::task::task(int (*)())
+                0x03802118                vex::task::task(int (*)())
  .text._ZN3vex4taskD2Ev
-                0x038021e4        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
-                0x038021e4                vex::task::~task()
-                0x038021e4                vex::task::~task()
+                0x03802174        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x03802174                vex::task::~task()
+                0x03802174                vex::task::~task()
  .text._ZN3vex4task4stopEPvi
-                0x038021e8       0x1c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
-                0x038021e8                vex::task::stop(void*, int)
+                0x03802178       0x1c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x03802178                vex::task::stop(void*, int)
  .text._ZN3vex4task6_indexEPFivE
-                0x03802204       0x14 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
-                0x03802204                vex::task::_index(int (*)())
+                0x03802194       0x14 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x03802194                vex::task::_index(int (*)())
  .text._ZN3vex4task8_stopAllEv
-                0x03802218       0x3c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
-                0x03802218                vex::task::_stopAll()
+                0x038021a8       0x3c c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x038021a8                vex::task::_stopAll()
  .text.__libc_fini_array
-                0x03802254       0x30 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5/gcc/libs\libc.a(lib_a-fini.o)
-                0x03802254                __libc_fini_array
+                0x038021e4       0x30 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5/gcc/libs\libc.a(lib_a-fini.o)
+                0x038021e4                __libc_fini_array
  .text.__libc_init_array
-                0x03802284       0x58 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5/gcc/libs\libc.a(lib_a-init.o)
-                0x03802284                __libc_init_array
- *fill*         0x038022dc        0x4 
+                0x03802214       0x58 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5/gcc/libs\libc.a(lib_a-init.o)
+                0x03802214                __libc_init_array
+ *fill*         0x0380226c        0x4 
  .text.__libc_init_array.__stub
-                0x038022e0       0x18 linker stubs
+                0x03802270       0x18 linker stubs
  *(.gnu.linkonce.t.*)
  *(.plt)
  *(.gnu_warning)
@@ -3029,10 +3036,10 @@ Linker script and memory map
  *(.ARM.extab)
  *(.gnu.linkonce.armextab.*)
 
-.v4_bx          0x038022f8        0x0
+.v4_bx          0x03802288        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x038022f8        0x0
+.iplt           0x03802288        0x0
  .iplt          0x00000000        0x0 build/src/main.o
 
 .init
@@ -3041,151 +3048,151 @@ Linker script and memory map
 .fini
  *(.fini)
 
-.rodata         0x038022f8      0x108
-                0x038022f8                __rodata_start = .
+.rodata         0x03802288      0x108
+                0x03802288                __rodata_start = .
  *(.rodata)
  *(.rodata.*)
  .rodata.str1.1
-                0x038022f8       0x12 build/src/main.o
+                0x03802288       0x12 build/src/main.o
  .rodata.str1.1
-                0x0380230a       0x2e c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
- .rodata._ZN3vex5PORT1E
-                0x03802338        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x03802338                vex::PORT1
+                0x0380229a       0x2e c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
  .rodata._ZN3vex6PORT14E
-                0x0380233c        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x0380233c                vex::PORT14
+                0x038022c8        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x038022c8                vex::PORT14
  .rodata._ZN3vex4msecE
-                0x03802340        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x03802340                vex::msec
- .rodata._ZN3vex5PORT9E
-                0x03802344        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x03802344                vex::PORT9
+                0x038022cc        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x038022cc                vex::msec
+ .rodata._ZN3vex5PORT6E
+                0x038022d0        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x038022d0                vex::PORT6
  .rodata._ZN3vex7primaryE
-                0x03802348        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x03802348                vex::primary
+                0x038022d4        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x038022d4                vex::primary
  .rodata._ZN3vex6PORT22E
-                0x0380234c        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x0380234c                vex::PORT22
+                0x038022d8        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x038022d8                vex::PORT22
  .rodata._ZN3vex6PORT12E
-                0x03802350        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x03802350                vex::PORT12
+                0x038022dc        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x038022dc                vex::PORT12
+ .rodata._ZN3vex5PORT7E
+                0x038022e0        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x038022e0                vex::PORT7
  .rodata._ZN3vex9ratio18_1E
-                0x03802354        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
-                0x03802354                vex::ratio18_1
+                0x038022e4        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x038022e4                vex::ratio18_1
  .rodata._ZTVN3vex5motorE
-                0x03802358       0x18 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03802358                vtable for vex::motor
+                0x038022e8       0x18 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x038022e8                vtable for vex::motor
  .rodata.CSWTCH.16
-                0x03802370        0xb c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03802300        0xb c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
  .rodata.CSWTCH.18
-                0x0380237b        0xb c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x0380230b        0xb c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
  .rodata.CSWTCH.24
-                0x03802386        0x3 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03802316        0x3 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
  .rodata.str1.1
-                0x03802389       0x2d c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
- *fill*         0x038023b6        0x2 
+                0x03802319       0x2d c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
+ *fill*         0x03802346        0x2 
  .rodata._ZTVN3vex7triportE
-                0x038023b8       0x18 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
-                0x038023b8                vtable for vex::triport
+                0x03802348       0x18 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03802348                vtable for vex::triport
  .rodata._ZTVN3vex6deviceE
-                0x038023d0       0x18 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
-                0x038023d0                vtable for vex::device
+                0x03802360       0x18 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x03802360                vtable for vex::device
  .rodata.str1.1
-                0x038023e8       0x14 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x03802378       0x14 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
  .rodata.str1.4
-                0x038023fc        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5/gcc/libs\libc.a(lib_a-impure.o)
+                0x0380238c        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5/gcc/libs\libc.a(lib_a-impure.o)
                                   0x2 (size before relaxing)
  *(.gnu.linkonce.r.*)
-                0x03802400                __rodata_end = .
+                0x03802390                __rodata_end = .
 
-.rodata1        0x03802400        0x0
-                0x03802400                __rodata1_start = .
+.rodata1        0x03802390        0x0
+                0x03802390                __rodata1_start = .
  *(.rodata1)
  *(.rodata1.*)
-                0x03802400                __rodata1_end = .
+                0x03802390                __rodata1_end = .
 
-.sdata2         0x03802400        0x0
-                0x03802400                __sdata2_start = .
+.sdata2         0x03802390        0x0
+                0x03802390                __sdata2_start = .
  *(.sdata2)
  *(.sdata2.*)
  *(.gnu.linkonce.s2.*)
-                0x03802400                __sdata2_end = .
+                0x03802390                __sdata2_end = .
 
-.sbss2          0x03802400        0x0
-                0x03802400                __sbss2_start = .
+.sbss2          0x03802390        0x0
+                0x03802390                __sbss2_start = .
  *(.sbss2)
  *(.sbss2.*)
  *(.gnu.linkonce.sb2.*)
-                0x03802400                __sbss2_end = .
+                0x03802390                __sbss2_end = .
 
-.data           0x03802400      0x43c
-                0x03802400                __data_start = .
+.data           0x03802390      0x43c
+                0x03802390                __data_start = .
  *(.data)
  *(.data.*)
  .data.appRunning
-                0x03802400        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
-                0x03802400                appRunning
- .data.__yoff   0x03802404        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03802390        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x03802390                appRunning
+ .data.__yoff   0x03802394        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
  .data._ZN3vex24__default_motor_velocityE
-                0x03802408        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
-                0x03802408                vex::__default_motor_velocity
- *fill*         0x0380240c        0x4 
+                0x03802398        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x03802398                vex::__default_motor_velocity
+ *fill*         0x0380239c        0x4 
  .data.impure_data
-                0x03802410      0x428 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5/gcc/libs\libc.a(lib_a-impure.o)
+                0x038023a0      0x428 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5/gcc/libs\libc.a(lib_a-impure.o)
  .data._impure_ptr
-                0x03802838        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5/gcc/libs\libc.a(lib_a-impure.o)
-                0x03802838                _impure_ptr
+                0x038027c8        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5/gcc/libs\libc.a(lib_a-impure.o)
+                0x038027c8                _impure_ptr
  *(.gnu.linkonce.d.*)
  *(.jcr)
  *(.got)
  *(.got.plt)
-                0x0380283c                __data_end = .
+                0x038027cc                __data_end = .
 
-.igot.plt       0x0380283c        0x0
+.igot.plt       0x038027cc        0x0
  .igot.plt      0x00000000        0x0 build/src/main.o
 
-.data1          0x0380283c        0x0
-                0x0380283c                __data1_start = .
+.data1          0x038027cc        0x0
+                0x038027cc                __data1_start = .
  *(.data1)
  *(.data1.*)
-                0x0380283c                __data1_end = .
+                0x038027cc                __data1_end = .
 
 .got
  *(.got)
 
-.ctors          0x0380283c        0x0
-                0x0380283c                __CTOR_LIST__ = .
-                0x0380283c                ___CTORS_LIST___ = .
+.ctors          0x038027cc        0x0
+                0x038027cc                __CTOR_LIST__ = .
+                0x038027cc                ___CTORS_LIST___ = .
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *(.ctors)
-                0x0380283c                __CTOR_END__ = .
-                0x0380283c                ___CTORS_END___ = .
+                0x038027cc                __CTOR_END__ = .
+                0x038027cc                ___CTORS_END___ = .
 
-.dtors          0x0380283c        0x0
-                0x0380283c                __DTOR_LIST__ = .
-                0x0380283c                ___DTORS_LIST___ = .
+.dtors          0x038027cc        0x0
+                0x038027cc                __DTOR_LIST__ = .
+                0x038027cc                ___DTORS_LIST___ = .
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *(.dtors)
-                0x0380283c                __DTOR_END__ = .
-                0x0380283c                ___DTORS_END___ = .
+                0x038027cc                __DTOR_END__ = .
+                0x038027cc                ___DTORS_END___ = .
 
-.fixup          0x0380283c        0x0
-                0x0380283c                __fixup_start = .
+.fixup          0x038027cc        0x0
+                0x038027cc                __fixup_start = .
  *(.fixup)
-                0x0380283c                __fixup_end = .
+                0x038027cc                __fixup_end = .
 
 .eh_frame
  *(.eh_frame)
 
-.eh_framehdr    0x0380283c        0x0
-                0x0380283c                __eh_framehdr_start = .
+.eh_framehdr    0x038027cc        0x0
+                0x038027cc                __eh_framehdr_start = .
  *(.eh_framehdr)
-                0x0380283c                __eh_framehdr_end = .
+                0x038027cc                __eh_framehdr_end = .
 
 .gcc_except_table
  *(.gcc_except_table)
@@ -3195,276 +3202,272 @@ Linker script and memory map
  *(.mmu_tbl)
                 0x03804000                __mmu_tbl_end = .
 
-.ARM.exidx      0x0380283c        0x8
-                0x0380283c                __exidx_start = .
+.ARM.exidx      0x038027cc        0x8
+                0x038027cc                __exidx_start = .
  *(.ARM.exidx*)
  .ARM.exidx.text._Z10autonomousv
-                0x0380283c        0x8 build/src/main.o
+                0x038027cc        0x8 build/src/main.o
  .ARM.exidx.text._Z11usercontrolv
-                0x03802844        0x0 build/src/main.o
+                0x038027d4        0x0 build/src/main.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text.main
-                0x03802844        0x0 build/src/main.o
+                0x038027d4        0x0 build/src/main.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._GLOBAL__sub_I_main.cpp
-                0x03802844        0x0 build/src/main.o
+                0x038027d4        0x0 build/src/main.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._Z11vexcodeInitv
-                0x03802844        0x0 build/src/robot-config.o
+                0x038027d4        0x0 build/src/robot-config.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text._GLOBAL__sub_I_robot_config.cpp
-                0x03802844        0x0 build/src/robot-config.o
+                0x038027d4        0x0 build/src/robot-config.o
                                   0x8 (size before relaxing)
  *(.gnu.linkonce.armexidix.*.*)
-                0x03802844                __exidx_end = .
+                0x038027d4                __exidx_end = .
 
-.rel.dyn        0x03802844        0x0
+.rel.dyn        0x038027d4        0x0
  .rel.iplt      0x00000000        0x0 build/src/main.o
 
-.preinit_array  0x03802844        0x0
-                0x03802844                __preinit_array_start = .
+.preinit_array  0x038027d4        0x0
+                0x038027d4                __preinit_array_start = .
  *(SORT(.preinit_array.*))
  *(.preinit_array)
-                0x03802844                __preinit_array_end = .
+                0x038027d4                __preinit_array_end = .
 
-.init_array     0x03802844        0xc
-                0x03802844                __init_array_start = .
+.init_array     0x038027d4        0xc
+                0x038027d4                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x03802844        0x4 build/src/main.o
- .init_array    0x03802848        0x4 build/src/robot-config.o
- .init_array    0x0380284c        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03802850                __init_array_end = .
+ .init_array    0x038027d4        0x4 build/src/main.o
+ .init_array    0x038027d8        0x4 build/src/robot-config.o
+ .init_array    0x038027dc        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x038027e0                __init_array_end = .
 
-.fini_array     0x03802850        0x0
-                0x03802850                __fini_array_start = .
+.fini_array     0x038027e0        0x0
+                0x038027e0                __fini_array_start = .
  *(SORT(.fini_array.*))
  *(.fini_array)
-                0x03802850                __fini_array_end = .
+                0x038027e0                __fini_array_end = .
 
 .ARM.attributes
-                0x03802850       0x3c
-                0x03802850                __ARM.attributes_start = .
+                0x038027e0       0x3c
+                0x038027e0                __ARM.attributes_start = .
  *(.ARM.attributes)
  .ARM.attributes
-                0x03802850       0x3a build/src/main.o
+                0x038027e0       0x3a build/src/main.o
  .ARM.attributes
-                0x0380288a       0x3a build/src/robot-config.o
+                0x0380281a       0x3a build/src/robot-config.o
  .ARM.attributes
-                0x038028c4       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x03802854       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
  .ARM.attributes
-                0x038028f9       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_util.c.obj)
+                0x03802889       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_util.c.obj)
  .ARM.attributes
-                0x0380292e       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x038028be       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
  .ARM.attributes
-                0x03802963       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiversions.c.obj)
+                0x038028f3       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiversions.c.obj)
  .ARM.attributes
-                0x03802998       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
+                0x03802928       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_global.cpp.obj)
  .ARM.attributes
-                0x038029cd       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
+                0x0380295d       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_motor.cpp.obj)
  .ARM.attributes
-                0x03802a02       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
+                0x03802992       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_controller.cpp.obj)
  .ARM.attributes
-                0x03802a37       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_thread.cpp.obj)
+                0x038029c7       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_thread.cpp.obj)
  .ARM.attributes
-                0x03802a6c       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_event.cpp.obj)
+                0x038029fc       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_event.cpp.obj)
  .ARM.attributes
-                0x03802aa1       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_mevent.cpp.obj)
+                0x03802a31       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_mevent.cpp.obj)
  .ARM.attributes
-                0x03802ad6       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
+                0x03802a66       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_brain.cpp.obj)
  .ARM.attributes
-                0x03802b0b       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03802a9b       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
  .ARM.attributes
-                0x03802b40       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
+                0x03802ad0       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_triport.cpp.obj)
  .ARM.attributes
-                0x03802b75       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03802b05       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
  .ARM.attributes
-                0x03802baa       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_timer.cpp.obj)
+                0x03802b3a       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_timer.cpp.obj)
  .ARM.attributes
-                0x03802bdf       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
+                0x03802b6f       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apiuser.c.obj)
  .ARM.attributes
-                0x03802c14       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
+                0x03802ba4       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_device.cpp.obj)
  .ARM.attributes
-                0x03802c49       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x03802bd9       0x35 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
  .ARM.attributes
-                0x03802c7e       0x2b c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5/gcc/libs\libc.a(lib_a-fini.o)
+                0x03802c0e       0x2b c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5/gcc/libs\libc.a(lib_a-fini.o)
  .ARM.attributes
-                0x03802ca9       0x2b c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5/gcc/libs\libc.a(lib_a-impure.o)
+                0x03802c39       0x2b c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5/gcc/libs\libc.a(lib_a-impure.o)
  .ARM.attributes
-                0x03802cd4       0x2b c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5/gcc/libs\libc.a(lib_a-init.o)
-                0x03802cff                __ARM.attributes_end = .
+                0x03802c64       0x2b c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5/gcc/libs\libc.a(lib_a-init.o)
+                0x03802c8f                __ARM.attributes_end = .
 
-.sdata          0x03802850        0x0
-                0x03802850                __sdata_start = .
+.sdata          0x038027e0        0x0
+                0x038027e0                __sdata_start = .
  *(.sdata)
  *(.sdata.*)
  *(.gnu.linkonce.s.*)
-                0x03802850                __sdata_end = .
+                0x038027e0                __sdata_end = .
 
-.sbss           0x03802850        0x0
-                0x03802850                __sbss_start = .
+.sbss           0x038027e0        0x0
+                0x038027e0                __sbss_start = .
  *(.sbss)
  *(.sbss.*)
  *(.gnu.linkonce.sb.*)
-                0x03802850                __sbss_end = .
+                0x038027e0                __sbss_end = .
 
-.tdata          0x03802850        0x0
-                0x03802850                __tdata_start = .
+.tdata          0x038027e0        0x0
+                0x038027e0                __tdata_start = .
  *(.tdata)
  *(.tdata.*)
  *(.gnu.linkonce.td.*)
-                0x03802850                __tdata_end = .
+                0x038027e0                __tdata_end = .
 
-.tbss           0x03802850        0x0
-                0x03802850                __tbss_start = .
+.tbss           0x038027e0        0x0
+                0x038027e0                __tbss_start = .
  *(.tbss)
  *(.tbss.*)
  *(.gnu.linkonce.tb.*)
-                0x03802850                __tbss_end = .
+                0x038027e0                __tbss_end = .
 
-.bss            0x03802850      0x5b8
-                0x03802850                __bss_start = .
+.bss            0x038027e0      0x5b0
+                0x038027e0                __bss_start = .
  *(.bss)
  *(.bss.*)
  .bss._ZStL8__ioinit
-                0x03802850        0x1 build/src/main.o
- *fill*         0x03802851        0x3 
+                0x038027e0        0x1 build/src/main.o
+ *fill*         0x038027e1        0x3 
  .bss.Competition
-                0x03802854       0x28 build/src/main.o
-                0x03802854                Competition
- .bss.A1        0x0380287c        0x4 build/src/main.o
-                0x0380287c                A1
- .bss.A2        0x03802880        0x4 build/src/main.o
-                0x03802880                A2
- .bss.A3        0x03802884        0x4 build/src/main.o
-                0x03802884                A3
- .bss.A4        0x03802888        0x4 build/src/main.o
-                0x03802888                A4
- .bss.Brain     0x0380288c      0x2bc build/src/robot-config.o
-                0x0380288c                Brain
+                0x038027e4       0x28 build/src/main.o
+                0x038027e4                Competition
+ .bss.A1        0x0380280c        0x4 build/src/main.o
+                0x0380280c                A1
+ .bss.A3        0x03802810        0x4 build/src/main.o
+                0x03802810                A3
+ .bss.Brain     0x03802814      0x2bc build/src/robot-config.o
+                0x03802814                Brain
  .bss.Controller
-                0x03802b48      0x1ac build/src/robot-config.o
-                0x03802b48                Controller
- .bss.Motor_LF  0x03802cf4       0x24 build/src/robot-config.o
-                0x03802cf4                Motor_LF
- .bss.Motor_LB  0x03802d18       0x24 build/src/robot-config.o
-                0x03802d18                Motor_LB
- .bss.Motor_RF  0x03802d3c       0x24 build/src/robot-config.o
-                0x03802d3c                Motor_RF
- .bss.Motor_RB  0x03802d60       0x24 build/src/robot-config.o
-                0x03802d60                Motor_RB
+                0x03802ad0      0x1ac build/src/robot-config.o
+                0x03802ad0                Controller
+ .bss.Motor_LF  0x03802c7c       0x24 build/src/robot-config.o
+                0x03802c7c                Motor_LF
+ .bss.Motor_LB  0x03802ca0       0x24 build/src/robot-config.o
+                0x03802ca0                Motor_LB
+ .bss.Motor_RF  0x03802cc4       0x24 build/src/robot-config.o
+                0x03802cc4                Motor_RF
+ .bss.Motor_RB  0x03802ce8       0x24 build/src/robot-config.o
+                0x03802ce8                Motor_RB
  .bss.__dso_handle
-                0x03802d84        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
-                0x03802d84                __dso_handle
+                0x03802d0c        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x03802d0c                __dso_handle
  .bss.lastTime.9835
-                0x03802d88        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
+                0x03802d10        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_apijump.c.obj)
  .bss._ZN3vex11competition22bStopTasksBetweenModesE
-                0x03802d8c        0x1 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03802d8c                vex::competition::bStopTasksBetweenModes
+                0x03802d14        0x1 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03802d14                vex::competition::bStopTasksBetweenModes
  .bss._ZN3vex11competition25bStopAllTasksBetweenModesE
-                0x03802d8d        0x1 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03802d8d                vex::competition::bStopAllTasksBetweenModes
+                0x03802d15        0x1 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03802d15                vex::competition::bStopAllTasksBetweenModes
  .bss._ZN3vex11competition14_auton_pendingE
-                0x03802d8e        0x1 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03802d8e                vex::competition::_auton_pending
- *fill*         0x03802d8f        0x1 
+                0x03802d16        0x1 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03802d16                vex::competition::_auton_pending
+ *fill*         0x03802d17        0x1 
  .bss._ZN3vex11competition20_autonomous_callbackE
-                0x03802d90        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03802d90                vex::competition::_autonomous_callback
+                0x03802d18        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03802d18                vex::competition::_autonomous_callback
  .bss._ZN3vex11competition23_drivercontrol_callbackE
-                0x03802d94        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03802d94                vex::competition::_drivercontrol_callback
+                0x03802d1c        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03802d1c                vex::competition::_drivercontrol_callback
  .bss._ZN3vex11competition15_driver_pendingE
-                0x03802d98        0x1 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
-                0x03802d98                vex::competition::_driver_pending
- *fill*         0x03802d99        0x3 
+                0x03802d20        0x1 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_competition.cpp.obj)
+                0x03802d20                vex::competition::_driver_pending
+ *fill*         0x03802d21        0x3 
  .bss._ZN3vex5color6orangeE
-                0x03802d9c        0x8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03802d9c                vex::color::orange
+                0x03802d24        0x8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03802d24                vex::color::orange
  .bss._ZN3vex5color5blackE
-                0x03802da4        0x8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03802da4                vex::color::black
+                0x03802d2c        0x8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03802d2c                vex::color::black
  .bss._ZN3vex5color6yellowE
-                0x03802dac        0x8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03802dac                vex::color::yellow
+                0x03802d34        0x8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03802d34                vex::color::yellow
  .bss._ZN3vex5color5greenE
-                0x03802db4        0x8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03802db4                vex::color::green
+                0x03802d3c        0x8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03802d3c                vex::color::green
  .bss._ZN3vex5color6purpleE
-                0x03802dbc        0x8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03802dbc                vex::color::purple
+                0x03802d44        0x8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03802d44                vex::color::purple
  .bss._ZN3vex5color4cyanE
-                0x03802dc4        0x8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03802dc4                vex::color::cyan
+                0x03802d4c        0x8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03802d4c                vex::color::cyan
  .bss._ZN3vex5color4blueE
-                0x03802dcc        0x8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03802dcc                vex::color::blue
+                0x03802d54        0x8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03802d54                vex::color::blue
  .bss._ZN3vex5color3redE
-                0x03802dd4        0x8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03802dd4                vex::color::red
+                0x03802d5c        0x8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03802d5c                vex::color::red
  .bss._ZN3vex5color11transparentE
-                0x03802ddc        0x8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03802ddc                vex::color::transparent
+                0x03802d64        0x8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03802d64                vex::color::transparent
  .bss._ZN3vex5color5whiteE
-                0x03802de4        0x8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
-                0x03802de4                vex::color::white
+                0x03802d6c        0x8 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_color.cpp.obj)
+                0x03802d6c                vex::color::white
  .bss._ZN3vex4task8_labelIdE
-                0x03802dec        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
-                0x03802dec                vex::task::_labelId
+                0x03802d74        0x4 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(vex_task.cpp.obj)
+                0x03802d74                vex::task::_labelId
  *(.gnu.linkonce.b.*)
  *(COMMON)
- COMMON         0x03802df0       0x18 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
-                0x03802df4                __vex_critical_section
-                0x03802e08                __bss_end = .
-                0x03802850                _SDA_BASE_ = (__sdata_start + ((__sbss_end - __sdata_start) / 0x2))
-                0x03802400                _SDA2_BASE_ = (__sdata2_start + ((__sbss2_end - __sdata2_start) / 0x2))
+ COMMON         0x03802d78       0x18 c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5\libv5rt.a(v5_startup.c.obj)
+                0x03802d7c                __vex_critical_section
+                0x03802d90                __bss_end = .
+                0x038027e0                _SDA_BASE_ = (__sdata_start + ((__sbss_end - __sdata_start) / 0x2))
+                0x03802390                _SDA2_BASE_ = (__sdata2_start + ((__sbss2_end - __sdata2_start) / 0x2))
 
-.heap           0x03802e08   0x100008
-                0x03802e10                . = ALIGN (0x10)
- *fill*         0x03802e08        0x8 
-                0x03802e10                _heap = .
-                0x03802e10                HeapBase = .
-                0x03802e10                _heap_start = .
-                0x03902e10                . = (. + _HEAP_SIZE)
- *fill*         0x03802e10   0x100000 
-                0x03902e10                _heap_end = .
-                0x03902e10                HeapLimit = .
+.heap           0x03802d90   0x100000
+                0x03802d90                . = ALIGN (0x10)
+ *fill*         0x03802d90        0x0 
+                0x03802d90                _heap = .
+                0x03802d90                HeapBase = .
+                0x03802d90                _heap_start = .
+                0x03902d90                . = (. + _HEAP_SIZE)
+ *fill*         0x03802d90   0x100000 
+                0x03902d90                _heap_end = .
+                0x03902d90                HeapLimit = .
 
-.stack          0x03902e10     0x3800
-                0x03902e10                . = ALIGN (0x10)
-                0x03902e10                _stack_end = .
-                0x03904e10                . = (. + _STACK_SIZE)
- *fill*         0x03902e10     0x2000 
-                0x03904e10                . = ALIGN (0x10)
-                0x03904e10                _stack = .
-                0x03904e10                __stack = _stack
-                0x03904e10                . = ALIGN (0x10)
-                0x03904e10                _irq_stack_end = .
-                0x03905210                . = (. + _IRQ_STACK_SIZE)
- *fill*         0x03904e10      0x400 
-                0x03905210                . = ALIGN (0x10)
-                0x03905210                __irq_stack = .
-                0x03905210                _supervisor_stack_end = .
-                0x03905a10                . = (. + _SUPERVISOR_STACK_SIZE)
- *fill*         0x03905210      0x800 
-                0x03905a10                . = ALIGN (0x10)
-                0x03905a10                __supervisor_stack = .
-                0x03905a10                _abort_stack_end = .
-                0x03905e10                . = (. + _ABORT_STACK_SIZE)
- *fill*         0x03905a10      0x400 
-                0x03905e10                . = ALIGN (0x10)
-                0x03905e10                __abort_stack = .
-                0x03905e10                _fiq_stack_end = .
-                0x03906210                . = (. + _FIQ_STACK_SIZE)
- *fill*         0x03905e10      0x400 
-                0x03906210                . = ALIGN (0x10)
-                0x03906210                __fiq_stack = .
-                0x03906210                _undef_stack_end = .
-                0x03906610                . = (. + _UNDEF_STACK_SIZE)
- *fill*         0x03906210      0x400 
-                0x03906610                . = ALIGN (0x10)
-                0x03906610                __undef_stack = .
-                0x03906610                _end = .
+.stack          0x03902d90     0x3800
+                0x03902d90                . = ALIGN (0x10)
+                0x03902d90                _stack_end = .
+                0x03904d90                . = (. + _STACK_SIZE)
+ *fill*         0x03902d90     0x2000 
+                0x03904d90                . = ALIGN (0x10)
+                0x03904d90                _stack = .
+                0x03904d90                __stack = _stack
+                0x03904d90                . = ALIGN (0x10)
+                0x03904d90                _irq_stack_end = .
+                0x03905190                . = (. + _IRQ_STACK_SIZE)
+ *fill*         0x03904d90      0x400 
+                0x03905190                . = ALIGN (0x10)
+                0x03905190                __irq_stack = .
+                0x03905190                _supervisor_stack_end = .
+                0x03905990                . = (. + _SUPERVISOR_STACK_SIZE)
+ *fill*         0x03905190      0x800 
+                0x03905990                . = ALIGN (0x10)
+                0x03905990                __supervisor_stack = .
+                0x03905990                _abort_stack_end = .
+                0x03905d90                . = (. + _ABORT_STACK_SIZE)
+ *fill*         0x03905990      0x400 
+                0x03905d90                . = ALIGN (0x10)
+                0x03905d90                __abort_stack = .
+                0x03905d90                _fiq_stack_end = .
+                0x03906190                . = (. + _FIQ_STACK_SIZE)
+ *fill*         0x03905d90      0x400 
+                0x03906190                . = ALIGN (0x10)
+                0x03906190                __fiq_stack = .
+                0x03906190                _undef_stack_end = .
+                0x03906590                . = (. + _UNDEF_STACK_SIZE)
+ *fill*         0x03906190      0x400 
+                0x03906590                . = ALIGN (0x10)
+                0x03906590                __undef_stack = .
+                0x03906590                _end = .
 LOAD c:\Users\Lovely Piggy\AppData\Roaming\Code\User\globalStorage\vexrobotics.vexcode\sdk\cpp\V5\V5_20220726_10_00_00/vexv5/stdlib_0.lib
 LOAD build/src/main.o
 LOAD build/src/robot-config.o

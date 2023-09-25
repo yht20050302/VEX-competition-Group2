@@ -41,7 +41,10 @@ void autonomous(void) {
   // Insert autonomous user code here.
   // ..........................................................................
 }
-
+void prevent_move(void){
+ if(A3<=10&&A3>=-25)
+  A3=0;  
+}
 /*---------------------------------------------------------------------------*/
 /*                                                                           */
 /*                              User Control Task                            */
@@ -54,15 +57,15 @@ void autonomous(void) {
 void usercontrol(void) {
   // User control code here, inside the loop
   while (1) {
-    A1 = Controller.Axis1.position(vex::percentUnits::pct);
-    A2 = Controller.Axis2.position(vex::percentUnits::pct);
-    A3 = Controller.Axis3.position(vex::percentUnits::pct);
-    A4 = Controller.Axis4.position(vex::percentUnits::pct);
-
-    Motor_LF.spin(directionType::fwd, (A1 - A2) - (A3 - A4), percentUnits::pct);
-    Motor_RF.spin(directionType::fwd, (A1 - A2) + (A3 - A4), percentUnits::pct);
-    Motor_LB.spin(directionType::fwd, (A1 - A2) - (A3 - A4), percentUnits::pct);
-    Motor_RB.spin(directionType::fwd, (A1 - A2) + (A3 - A4), percentUnits::pct);
+    A1 = Controller.Axis1.position(vex::percentUnits::pct);//r_x
+  //  A2 = Controller.Axis2.position(vex::percentUnits::pct);//r_y
+    A3 = Controller.Axis3.position(vex::percentUnits::pct);//l_y
+  //  A4 = Controller.Axis4.position(vex::percentUnits::pct);//l_x
+    prevent_move();
+    Motor_LF.spin(directionType::fwd, A3 + A1, percentUnits::pct);
+    Motor_RF.spin(directionType::fwd, A3 - A1, percentUnits::pct);
+    Motor_LB.spin(directionType::fwd, A3 + A1, percentUnits::pct);
+    Motor_RB.spin(directionType::fwd, A3 - A1, percentUnits::pct);
     // This is the main execution loop for the user control program.
     // Each time through the loop your program should update motor + servo
     // values based on feedback from the joysticks.
